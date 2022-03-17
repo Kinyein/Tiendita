@@ -1,0 +1,85 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "name": "Limon con semilla",
+            "oldPrice": 39.9,
+            "price": 26.82,
+            "img": "https://i.ibb.co/ZSSw8QH/limon.png"
+        },
+        {
+            "id": 2,
+            "name": "Tomate",
+            "oldPrice": 32.9,
+            "price": 21.79,
+            "img": "https://i.ibb.co/Y32D07K/tomate.png"
+        },
+        {
+            "id": 3,
+            "name": "Aguacate Hass",
+            "oldPrice": 69.9,
+            "price": 56.8,
+            "img": "https://i.ibb.co/R9rxKdv/aguacate.png"
+        },
+        {
+            "id": 4,
+            "name": "Nopal Limpio",
+            "oldPrice": 29.9,
+            "price": 25.8,
+            "img": "https://i.ibb.co/vcmBnVh/nopal.png"
+        },
+        {
+            "id": 5,
+            "name": "Tomate Verde Sin Cascara",
+            "oldPrice": 24.9,
+            "price": 22.89,
+            "img": "https://i.ibb.co/wRWtZvk/tomate-Verde.png"
+        },
+        {
+            "id": 6,
+            "name": "Cocal Cola Sin Azucar",
+            "oldPrice": 39.9,
+            "price": 26.82,
+            "img": "https://arroces.co/wp-content/uploads/2021/04/ccsa-1.5-1.png"
+        }
+    ],
+
+    "populares":[
+        {
+            "id": 7,
+            "name": "San Rafael Pechuga de pavo",
+            "price": 62.5,
+            "img": "https://i.ibb.co/FWL9shL/pechuga-Pavo.png"
+        },
+        {
+            "id": 8,
+            "name": "Bimbo Pan Blanco Grande",
+            "price": 38.9,
+            "img": "https://i.ibb.co/RcmJWY1/panBimbo.png"
+        },
+        {
+            "id": 9,
+            "name": "Mc Cormick Mayonesa",
+            "price": 48.5,
+            "img": "https://i.ibb.co/BKqXPJZ/mayonesa.png"
+        },
+        {
+            "id": 10,
+            "name": "Colgate Pasta Dental Triple Familiar 2 U",
+            "price": 35.5,
+            "img": "https://i.ibb.co/BqqXQtw/pasta-Dental.png"
+        },
+        {
+            "id": 11,
+            "name": "Huevo San Juan",
+            "price": 37.5,
+            "img": "https://i.ibb.co/ngdqdCf/huevos.png"
+        },
+        {
+            "id": 12,
+            "name": "Fabuloso Limpiador Antibacterial",
+            "price": 26.86,
+            "img": "https://i.ibb.co/7VMkkp8/imagen-2022-03-14-210330-removebg-preview.png"
+        }
+    ]
+}

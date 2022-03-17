@@ -1,0 +1,553 @@
+@greenButton: #0AC763;
+@background: #C4C4C4;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body.body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    background-color: @background;
+
+    .header {
+        grid-row: span 1;
+        background-color: #ffff;
+
+
+        .navHeader {
+            height: 80px;
+            margin: 0 25px;
+
+            .title {
+                color: #FC462D;
+                font-size: 22px;
+            }
+
+            .cartShopping {
+                border: none;
+                background-color: @greenButton;
+                width: 89px;
+                height: 40px;
+                border-radius: 8px;
+                margin: 0 10px;
+
+                .bi-cart {
+                    transform: scale(1.5);
+                    margin: 10px;
+                    color: white;
+                }
+
+                .cantCart {
+                    color: white;
+                    display: inline-block;
+                }
+            }
+        }
+
+        #staticBackdrop {
+            .modal-content {
+                width: 130%;
+
+                #modalHeader {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    p {
+                        margin: 10px 0;
+                    }
+
+                    button {
+                        background-color: transparent;
+                        border: none;
+
+                        .bi-x-circle-fill {
+                            transform: scale(2);
+                        }
+                    }
+                }
+
+                .modal-body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    margin: 20px;
+
+                    #address {
+                        height: 48px;
+                        border-radius: 8px;
+                    }
+
+                    button {
+                        height: 48px;
+                        background-color: @greenButton;
+                        color: #fff;
+                    }
+                }
+
+
+
+
+            }
+        }
+
+        #modalCart {
+
+            .modal-content {
+                width: 140%;
+
+                #modalHeader {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    button {
+                        background-color: transparent;
+                        border: none;
+
+                        .bi-x-circle-fill {
+                            transform: scale(2);
+                        }
+                    }
+                }
+
+                #modalBody {
+
+                    .emptyCart {
+                        margin: 30% 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 20px;
+                    }
+
+                    #cartProducts {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+
+                        .productsCart {
+                            display: flex;
+                            justify-content: space-around;
+                            flex-direction: row;
+                            width: 100%;
+                            flex-wrap: wrap;
+                            margin: 20px 0;
+                            gap: 27px;
+
+                            #separador {
+                                color: rgb(110, 110, 110);
+                                width: 100%;
+                            }
+
+                            .imgTextProduct {
+                                display: flex;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                width: 60%;
+
+                                img {
+                                    width: 50%;
+                                }
+                            }
+
+                            .cantidadProduct {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 10px;
+                                margin: 8px;
+
+                                .selectCant {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    padding: 8px 24px;
+                                    width: 167px;
+                                    height: 40px;
+                                    background-color: rgb(255, 255, 255);
+                                    border-radius: 8px;
+                                    box-shadow: 5px 5px 20px 5px rgb(230, 230, 230);
+
+                                    p {
+                                        margin: 5px;
+                                    }
+
+                                    button {
+                                        border: none;
+                                        background: transparent;
+                                        width: 20px;
+                                        margin: 0 10px;
+                                        height: 100%;
+                                    }
+
+                                    button:active {
+                                        transform: scale(.8);
+
+                                        .fa-minus:active {
+                                            color: rgb(119, 119, 119);
+                                        }
+
+                                        .fa-plus:active {
+                                            color: rgb(119, 119, 119);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+
+
+                }
+
+                .modal-footer {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    #clearCart {
+                        border: none;
+                        background-color: transparent;
+                        color: rgb(173, 172, 172);
+                    }
+
+                    #pagar {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        background-color: @greenButton;
+                        border: none;
+                        width: 230px;
+                        height: 40px;
+                        border-radius: 8px;
+
+                        p {
+                            color: white;
+                            margin: 2px;
+                        }
+
+                        .cantCart {
+                            width: 25px;
+                            border-radius: 4px;
+                            background-color: #2E7E78;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        #modalPay {
+            .modal-header {
+                button {
+                    background-color: transparent;
+                    border: none;
+
+                    .bi-arrow-left-circle-fill {
+                        transform: scale(2);
+                    }
+                }
+            }
+
+            .modal-body {
+                .form {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    input {
+                        height: 40px;
+                        border-radius: 8px;
+                        border: 1px solid rgb(161, 159, 159);
+                    }
+
+                    #pagarTotal {
+                        border: none;
+                        background-color: transparent;
+                        height: 40px; 
+
+                        .total {
+                            background: @greenButton;
+                            height: 100%;
+                            width: 100%;
+                            border: none;
+                            border-radius: 8px;
+                            color: white;
+                            font-size: 14px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 40px;
+        margin: 0 3%;
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 40px;
+
+            .divTextBanner {
+                position: absolute;
+                height: auto;
+                text-align: center;
+                max-width: 60%;
+
+                .textBanner {
+                    font-size: 28px;
+                    color: white;
+                }
+            }
+
+            img {
+                height: auto;
+                width: 100%
+            }
+        }
+
+        .ofertas {
+            background-color: #fff;
+            border-radius: 16px;
+
+            .ofertasTitle {
+                font-size: 20px;
+                margin: 40px;
+            }
+
+            .productContainer {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 40px;
+                gap: 48px;
+
+                .productCard {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 194px;
+                    height: 350px;
+
+                    img {
+                        height: auto;
+                        width: 100%;
+                    }
+
+                    .oldPrice {
+                        color: #B8B4B4;
+                        text-decoration: line-through;
+                    }
+
+                    .add {
+                        background: @greenButton;
+                        height: 40px;
+                        width: 100%;
+                        border: none;
+                        border-radius: 8px;
+                        color: white;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .popular {
+            background-color: #fff;
+            border-radius: 16px;
+            margin-bottom: 40px;
+
+            .popularTitle {
+                font-size: 20px;
+                margin: 40px;
+            }
+
+            .popularContainer {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 40px;
+                gap: 48px;
+
+                .popularProduct {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    width: 194px;
+                    height: 340px;
+
+                    img {
+                        height: auto;
+                        width: 100%;
+                    }
+
+                    .add {
+                        background: @greenButton;
+                        height: 40px;
+                        width: 100%;
+                        border: none;
+                        border-radius: 8px;
+                        color: white;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        #infoProduct {
+
+            #modalHeader {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+
+                button {
+                    background-color: transparent;
+                    border: none;
+
+                    .bi-x-circle-fill {
+                        transform: scale(2);
+                    }
+                }
+            }
+
+            .modal-content {
+                width: 170%;
+            }
+
+            .divInfoProduct {
+
+                .relacionados {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+
+
+                    #productsRelacionados {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        gap: 20px;
+
+                        .productCard {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            width: 200px;
+
+                            img {
+                                width: 100%
+                            }
+
+                            .add {
+                                background: @greenButton;
+                                height: 40px;
+                                width: 100%;
+                                border: none;
+                                border-radius: 8px;
+                                color: white;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .productDetail {
+                display: flex;
+                flex-wrap: wrap;
+
+                img {
+                    height: 80%;
+                    width: 35%;
+                }
+
+                .infoTextProduct {
+                    margin: 10px 20px 20px 20px;
+
+                    select {
+                        height: 48px;
+                        width: 100%;
+                        margin: 10px 0;
+                        border-radius: 8px;
+                    }
+                }
+            }
+
+            .cantidadProduct {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 10px;
+                margin: 8px;
+
+                .add {
+                    background: @greenButton;
+                    height: 40px;
+                    width: 100%;
+                    border: none;
+                    border-radius: 8px;
+                    color: white;
+                    font-size: 14px;
+                    margin-left: 20px;
+                }
+
+                .selectCant {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 8px 24px;
+                    width: 167px;
+                    height: 40px;
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 8px;
+                    box-shadow: 5px 5px 20px 5px rgb(230, 230, 230);
+
+                    p {
+                        margin: 5px;
+                    }
+
+                    button {
+                        border: none;
+                        background: transparent;
+                        width: 20px;
+                        margin: 0 10px;
+                        height: 100%;
+                    }
+
+                    button:active {
+                        transform: scale(.8);
+
+                        .fa-minus:active {
+                            color: rgb(119, 119, 119);
+                        }
+
+                        .fa-plus:active {
+                            color: rgb(119, 119, 119);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
